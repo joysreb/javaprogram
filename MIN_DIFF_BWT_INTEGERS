@@ -1,0 +1,30 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t>0){
+		    int n=sc.nextInt();
+		    int[] arr=new int[n];
+		    for(int i=0;i<n;i++){
+		        arr[i]=sc.nextInt();
+	        }
+		    Arrays.sort(arr);
+		    int min=Integer.MAX_VALUE;
+		    System.out.println(min);
+		    for(int j=0;j<n-1;j++){
+		        int sub=arr[j+1]-arr[j];
+		        min=Math.min(sub,min);
+		    }
+		    System.out.print(min);
+		}
+	}
+}
