@@ -25,6 +25,7 @@ public class Main
 		        min=Math.min(sub,min);
 		    }
 		    System.out.print(min);
+		    t--;
 		}
 	}
 }
