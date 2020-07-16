@@ -1,0 +1,56 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc=new Scanner(System.in);
+	    int t=sc.nextInt();
+	    while(t>0){
+	        int n=sc.nextInt();
+	        int m=sc.nextInt();
+	        List<Integer> total=new ArrayList<>();
+	        List<Integer> workdone=new ArrayList<>();
+	        for(int i=1;i<=n;i++){
+	            total.add(i);
+	        }
+	        for(int j=0;j<m;j++){
+	            workdone.add(sc.nextInt());
+	        }
+	        total.removeAll(workdone);
+	        List<Integer> chef=new ArrayList<>();
+	        List<Integer> assistant=new ArrayList<>();
+	        for(int k=0;k<total.size();k++){
+	            if(k%2==0){
+	                chef.add(total.get(k));
+	            }
+	            else{
+	                assistant.add(total.get(k));
+	            }
+	        }
+	        Iterator itr=chef.iterator();
+	        Iterator itr2=assistant.iterator();
+	        while(itr.hasNext()){
+	            System.out.print(itr.next()+" ");
+	        }
+	        System.out.println();
+	        while(itr2.hasNext()){
+	            System.out.print(itr2.next()+" ");
+	        }
+	        t--;
+	       
+	    }
+	    
+	  
+	        
+	        
+	            
+	        
+	    
+	}
+}
